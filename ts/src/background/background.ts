@@ -1,6 +1,7 @@
 import {
   OWGames,
   OWGameListener,
+  OWGamesEvents,
   OWWindow
 } from '@overwolf/overwolf-api-ts';
 
@@ -19,6 +20,7 @@ class BackgroundController {
   private static _instance: BackgroundController;
   private _windows: Record<string, OWWindow> = {};
   private _gameListener: OWGameListener;
+  private _gameEventsListener: OWGamesEvents;
 
   private constructor() {
     // Populating the background controller's window dictionary
@@ -54,11 +56,16 @@ class BackgroundController {
       ? kWindowNames.inGame
       : kWindowNames.desktop;
 
+    console.log(currWindowName);
     this._windows[currWindowName].restore();
   }
 
   private async onAppLaunchTriggered(e: AppLaunchTriggeredEvent) {
     console.log('onAppLaunchTriggered():', e);
+
+    // if (!e) {
+    //   return;
+    // }
 
     if (!e || e.origin.includes('gamelaunchevent')) {
       return;
@@ -95,6 +102,7 @@ class BackgroundController {
 
   // Identify whether the RunningGameInfo object we have references a supported game
   private isSupportedGame(info: RunningGameInfo) {
+    console.log(info.classId)
     return kGameClassIds.includes(info.classId);
   }
 }

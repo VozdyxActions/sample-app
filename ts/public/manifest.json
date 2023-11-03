@@ -15,7 +15,17 @@
   },
   "permissions": [
     "Hotkeys",
-    "GameInfo"
+    "GameInfo",
+    "Extensions",
+    "Streaming",
+    "DesktopStreaming",
+    "Profile",
+    "Media",
+    "GameControl",
+    "FileSystem",
+    "VideoCaptureSettings",
+    "Web",
+    "Tray"
   ],
   "data": {
     "start_window": "background",
@@ -43,15 +53,17 @@
       "background": {
         "file": "background.html",
         "background_optimization": false,
-        "is_background_page": true
+        "is_background_page": true,
+        "open_dev_tools": true
       },
       "desktop": {
         "file": "desktop.html",
         "desktop_only": true,
         "native_window": true,
-        "resizable": true,
+        "resizable": false,
         "transparent": true,
         "override_on_update": true,
+        "is_alt_f4_blocked": true,
         "size": {
           "width": 1212,
           "height": 699
@@ -66,9 +78,10 @@
         "in_game_only": true,
         "focus_game_takeover": "ReleaseOnHidden",
         "focus_game_takeover_release_hotkey": "sample_app_ts_showhide",
-        "resizable": true,
+        "resizable": false,
         "transparent": true,
         "override_on_update": true,
+        "is_alt_f4_blocked": true,
         "size": {
           "width": 1212,
           "height": 699
@@ -80,23 +93,7 @@
       }
     },
     "game_targeting": {
-      "type": "dedicated",
-      "game_ids": [
-        21216,
-        7764,
-        5426,
-        21634,
-        8032,
-        10844,
-        10906,
-        10826,
-        21404,
-        7212,
-        21640,
-        7314,
-        21626,
-        8954
-      ]
+      "type": "all"
     },
     "game_events": [
       21216,
@@ -112,36 +109,26 @@
       21640,
       7314,
       21626,
-      8954
+      8954,
+      44361,
+      55941,
+      5594,
+      227301,
+      22730
     ],
     "launch_events": [
       {
-        "event": "GameLaunch",
-        "event_data": {
-          "game_ids": [
-            21216,
-            7764,
-            5426,
-            21634,
-            8032,
-            10844,
-            10906,
-            10826,
-            21404,
-            7212,
-            21640,
-            7314,
-            21626,
-            8954
-          ]
-        },
-        "start_minimized": true
+        "event": "AllGamesLaunch",
+        "tracked": true,
+        "track_all_games": true,
+        "start_minimized": false
       }
     ],
     "developer": {
       "enable_auto_refresh": true,
       "reload_delay": 1000,
       "filter": "*.*"
-    }
+    },
+    "open_dev_tools": true
   }
 }

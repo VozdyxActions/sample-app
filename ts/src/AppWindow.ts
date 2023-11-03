@@ -8,11 +8,11 @@ export class AppWindow {
   protected maximized: boolean = false;
 
   constructor(windowName) {
-    this.mainWindow = new OWWindow('background');
+    this.currWindow = new OWWindow('background');
     this.currWindow = new OWWindow(windowName);
 
     const closeButton = document.getElementById('closeButton');
-    const maximizeButton = document.getElementById('maximizeButton');
+    // const maximizeButton = document.getElementById('maximizeButton');
     const minimizeButton = document.getElementById('minimizeButton');
 
     const header = document.getElementById('header');
@@ -20,22 +20,22 @@ export class AppWindow {
     this.setDrag(header);
 
     closeButton.addEventListener('click', () => {
-      this.mainWindow.close();
+      this.currWindow.close();
     });
 
     minimizeButton.addEventListener('click', () => {
       this.currWindow.minimize();
     });
 
-    maximizeButton.addEventListener('click', () => {
-      if (!this.maximized) {
-        this.currWindow.maximize();
-      } else {
-        this.currWindow.restore();
-      }
+    // maximizeButton.addEventListener('click', () => {
+    //   if (!this.maximized) {
+    //     this.currWindow.maximize();
+    //   } else {
+    //     this.currWindow.restore();
+    //   }
 
-      this.maximized = !this.maximized;
-    });
+    //   this.maximized = !this.maximized;
+    // });
   }
 
   public async getWindowState() {
