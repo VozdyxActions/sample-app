@@ -19,7 +19,7 @@ export const kGamesFeatures = new Map<number, string[]>([
       'counters'
     ]
   ],
-  // CSGO
+  // CS 2
   [
     22730,
     [
@@ -220,5 +220,5 @@ export const kWindowNames = {
 };
 
 export const kHotkeys = {
-  toggle: 'sample_app_ts_showhide'
+  toggle: 'cyberx_app_ts_showhide'
 };
