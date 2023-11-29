@@ -2,12 +2,12 @@
   "manifest_version": 1,
   "type": "WebApp",
   "meta": {
-    "name": "Sample App",
-    "author": "Overwolf",
-    "version": "3.0.3",
+    "name": "CyberX Game Achievements",
+    "author": "Vozdyx",
+    "version": "1.0.0",
     "minimum-overwolf-version": "0.160.0",
     "description": "An example app for developers new to Overwolf",
-    "dock_button_title": "Sample - TS",
+    "dock_button_title": "CyberX Game Achievements",
     "icon": "icons/IconMouseOver.png",
     "icon_gray": "icons/IconMouseNormal.png",
     "launcher_icon": "icons/desktop-icon.ico",
@@ -121,8 +121,12 @@
         "event": "AllGamesLaunch",
         "tracked": true,
         "track_all_games": true,
-        "start_minimized": false
-      }
+        "start_minimized": true
+      },
+			{
+				"event": "LaunchWithOverwolf",
+				"start_minimized": true
+			}
     ],
     "developer": {
       "enable_auto_refresh": true,
@@ -130,8 +134,8 @@
       "filter": "*.*"
     },
     "open_dev_tools": true,
-    "process_name": "my sample app",
-    "auto_relaunch_on_crash": false,
+    "process_name": "CXGA",
+    "auto_relaunch_on_crash": true,
     "disable_dt": false
   }
 }

@@ -1,3 +1,5 @@
+import { CS2 } from "./background/games/cs2";
+
 export const kGamesFeatures = new Map<number, string[]>([
   // Fortnite
   [
@@ -213,6 +215,10 @@ export const kGamesFeatures = new Map<number, string[]>([
 ]);
 
 export const kGameClassIds = Array.from(kGamesFeatures.keys());
+
+export const kGameListeners = {
+  22730: new CS2()
+}
 
 export const kWindowNames = {
   inGame: 'in_game',

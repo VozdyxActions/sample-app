@@ -1,0 +1,116 @@
+{
+    "provider": {
+        "name": "Counter-Strike: Global Offensive",
+        "appid": 730,
+        "version": 13973,
+        "steamid": "76561198993507968",
+        "timestamp": 1701267029
+    },
+    "player": {
+        "steamid": "76561198993507968",
+        "name": "Vozdyx",
+        "observer_slot": 0,
+        "activity": "menu",
+        "state": {
+            "health": 100,
+            "armor": 0,
+            "helmet": false,
+            "flashed": 0,
+            "smoked": 0,
+            "burning": 0,
+            "money": 16000,
+            "round_kills": 0,
+            "round_killhs": 0,
+            "equip_value": 700
+        },
+        "match_stats": {
+            "kills": 0,
+            "assists": 0,
+            "deaths": 0,
+            "mvps": 0,
+            "score": 0
+        },
+        "weapons": {}
+    },
+    "map": {
+        "mode": "competitive",
+        "name": "de_inferno",
+        "phase": "warmup",
+        "round": 0,
+        "team_ct": {
+            "score": 0,
+            "consecutive_round_losses": 1,
+            "timeouts_remaining": 1,
+            "matches_won_this_series": 0
+        },
+        "team_t": {
+            "score": 0,
+            "consecutive_round_losses": 1,
+            "timeouts_remaining": 1,
+            "matches_won_this_series": 0
+        },
+        "num_matches_to_win_series": 0
+    },
+    "previously": {
+        "player": {
+            "observer_slot": 5,
+            "team": "CT",
+            "state": {
+                "money": 13850
+            },
+            "match_stats": {
+                "kills": 60,
+                "deaths": 1,
+                "mvps": 12,
+                "score": 120
+            },
+            "weapons": {
+                "weapon_0": {
+                    "name": "weapon_knife",
+                    "paintkit": "default",
+                    "type": "Knife",
+                    "state": "holstered"
+                },
+                "weapon_1": {
+                    "name": "weapon_deagle",
+                    "paintkit": "default",
+                    "type": "Pistol",
+                    "ammo_clip": 7,
+                    "ammo_clip_max": 7,
+                    "ammo_reserve": 35,
+                    "state": "active"
+                }
+            }
+        },
+        "map": {
+            "phase": "gameover",
+            "round": 15,
+            "team_ct": {
+                "score": 13,
+                "consecutive_round_losses": 0
+            },
+            "team_t": {
+                "score": 2,
+                "consecutive_round_losses": 4
+            },
+            "round_wins": {
+                "1": "ct_win_elimination",
+                "2": "t_win_elimination",
+                "3": "t_win_elimination",
+                "4": "t_win_elimination",
+                "5": "t_win_elimination",
+                "6": "ct_win_time",
+                "7": "t_win_elimination",
+                "8": "t_win_elimination",
+                "9": "t_win_elimination",
+                "10": "t_win_elimination",
+                "11": "t_win_elimination",
+                "12": "t_win_elimination",
+                "13": "ct_win_elimination",
+                "14": "ct_win_elimination",
+                "15": "ct_win_time"
+            }
+        },
+        "round": true
+    }
+}
